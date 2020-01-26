@@ -5,21 +5,21 @@ import java.util.Objects;
 
 public class PolicySubObject {
 
-    private SubObjectName name;
+    private String name;
     private BigDecimal sumInsured;
     private RiskType riskType;
 
-    public PolicySubObject(SubObjectName name, BigDecimal sumInsured, RiskType riskType) {
+    public PolicySubObject(String name, BigDecimal sumInsured, RiskType riskType) {
         this.name = name;
         this.sumInsured = sumInsured;
         this.riskType = riskType;
     }
 
-    public SubObjectName getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(SubObjectName name) {
+    public void setName(String name) {
         this.name = name;
     }
 

@@ -3,23 +3,24 @@ package entities;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Policy {
 
     private String number;
-    private String status; //enum
+    private Status status;
 
     private List<PolicyObject> objectsList = new ArrayList<>();
     // Policy objects -- Collection of one or multiple objects
     private BigDecimal premium;
     //Premium -- Client pays this sum for the policy
 
-
-    public Policy(String number, String status, List<PolicyObject> objectsList) {
+    public Policy(String number, Status status) {
         this.number = number;
         this.status = status;
-        this.objectsList = objectsList;
+    }
+
+    public void addObject(PolicyObject policyObject) {
+        objectsList.add(policyObject);
     }
 
     public String getNumber() {
@@ -30,11 +31,11 @@ public class Policy {
         this.number = number;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 

@@ -23,7 +23,7 @@ public class PolicyObject {
         subObjects.put(subObject, subObject.getRiskType());
     }
 
-    public void addSubObject(SubObjectName name, BigDecimal sumInsured, RiskType riskType) {
+    public void addSubObject(String name, BigDecimal sumInsured, RiskType riskType) {
         addSubObject(new PolicySubObject(name, sumInsured, riskType));
     }
 
